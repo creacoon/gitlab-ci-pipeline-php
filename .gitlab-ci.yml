@@ -14,7 +14,7 @@ services:
   - docker:dind
 
 before_script:
-  - docker login -u $DOCKER_REGISTRY_USER -p $DOCKER_JOB_TOKEN $DOCKER_HOST
+  - docker login -u $DOCKER_REGISTRY_USER -p $DOCKER_REGISTRY_PASSWORD $DOCKER_HOST
 
 Debian 8.0:
   stage: build
