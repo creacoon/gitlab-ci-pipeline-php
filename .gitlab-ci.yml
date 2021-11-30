@@ -10,9 +10,6 @@ variables:
   DOCKER_DRIVER: overlay2
   NAMESPACE: creacoon/gitlab-ci-pipeline-php
 
-services:
-  - docker:dind
-
 before_script:
   - echo "$CI_REGISTRY_PASSWORD" | docker login registry.hub.docker.com --username foo --password-stdin
 
