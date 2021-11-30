@@ -9,12 +9,12 @@ image: docker:latest
 variables:
   DOCKER_DRIVER: overlay2
   NAMESPACE: creacoon/gitlab-ci-pipeline-php
-  DOCKER_HOST: $CI_REGISTRY
+  DOCKER_HOST: tcp://registry.hub.docker.com:2375
 services:
   - docker:dind
 
 before_script:
-  - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+  - docker login -u $DOCKER_REGISTRY_USER -p $DOCKER_JOB_TOKEN $DOCKER_HOST
 
 Debian 8.0:
   stage: build
