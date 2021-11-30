@@ -1,4 +1,4 @@
-FROM php:8.0
+FROM php:8.0-buster
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -7,7 +7,7 @@ LABEL maintainer="Eduardo Bizarro <edbizarro@gmail.com>" \
   PHP="8.0" \
   NODE="14" \
   org.label-schema.name="edbizarro/gitlab-ci-pipeline-php" \
-  org.label-schema.description=":coffee: Docker images for build and test PHP applications with Gitlab CI (or any other CI plataform!)" \
+  org.label-schema.description=":coffee: Docker images for build and test PHP applications with Gitlab CI (or any other CI platform!)" \
   org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.schema-version="1.0" \
   org.label-schema.vcs-url="https://github.com/edbizarro/gitlab-ci-pipeline-php" \
