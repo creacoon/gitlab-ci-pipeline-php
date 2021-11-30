@@ -14,7 +14,7 @@ services:
   - docker:dind
 
 before_script:
-  - echo "$CI_REGISTRY_PASSWORD" | docker login --username foo --password-stdin
+  - echo "$CI_REGISTRY_PASSWORD" | docker login registry.hub.docker.com --username foo --password-stdin
 
 Debian 8.0:
   stage: build
